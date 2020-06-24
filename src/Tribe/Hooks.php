@@ -68,7 +68,7 @@ class Hooks extends \tad_DI52_ServiceProvider {
 	 */
 	public function load_text_domains() {
 		$mo_path = tribe( Plugin::class )->plugin_dir . 'lang/';
-		$domain = 'user_timezone';
+		$domain = 'user-timezone';
 
 		// This will load `wp-content/languages/plugins` files first.
 		\Tribe__Main::instance()->load_text_domain( $domain, $mo_path );

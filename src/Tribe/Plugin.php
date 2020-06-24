@@ -74,7 +74,6 @@ class Plugin extends \tad_DI52_ServiceProvider {
 		$this->container->singleton( static::class, $this );
 		$this->container->singleton( 'extension.user_timezone', $this );
 		$this->container->singleton( 'extension.user_timezone.plugin', $this );
-		$this->container->register( PUE::class );
 
 		if ( ! $this->check_plugin_dependencies() ) {
 			// If the plugin dependency manifest is not met, then bail and stop here.
