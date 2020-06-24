@@ -21,3 +21,6 @@ tests/*.suite.yml
 
 # Tests - local output files
 tests/_output
+
+# Template files
+README.md
