@@ -1,6 +1,6 @@
 <?php
 
-namespace Tribe\Extensions\__TRIBE_NAMESPACE__;
+namespace Tribe\Extensions\User_Timezone;
 
 use Tribe__Settings_Manager;
 

@@ -2,21 +2,21 @@
 /**
  * Handles the Extension plugin dependency manifest registration.
  *
- * @since __TRIBE_VERSION__
+ * @since 0.1
  *
- * @package Tribe\Extensions\__TRIBE_NAMESPACE__
+ * @package Tribe\Extensions\User_Timezone
  */
 
-namespace Tribe\Extensions\__TRIBE_NAMESPACE__;
+namespace Tribe\Extensions\User_Timezone;
 
 use Tribe__Abstract_Plugin_Register as Abstract_Plugin_Register;
 
 /**
  * Class Plugin_Register.
  *
- * @since   __TRIBE_VERSION__
+ * @since 0.1
  *
- * @package Tribe\Extensions\__TRIBE_NAMESPACE__
+ * @package Tribe\Extensions\User_Timezone
  *
  * @see Tribe__Abstract_Plugin_Register For the plugin dependency manifest registration.
  */

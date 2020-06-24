@@ -1,15 +1,15 @@
 <?php
 /**
- * Plugin Name:       __TRIBE_BASE__ Extension: __TRIBE_NAME__
- * Plugin URI:        __TRIBE_URL__
- * GitHub Plugin URI: https://github.com/mt-support/tribe-ext-__TRIBE_SLUG__
- * Description:       __TRIBE_DESCRIPTION__
- * Version:           __TRIBE_VERSION__
+ * Plugin Name:       The Events Calendar Extension: User Timezone
+ * Plugin URI:        https://theeventscalendar.com/extensions/---the-extension-article-url---/
+ * GitHub Plugin URI: https://github.com/mt-support/tribe-ext-user-timezone
+ * Description:       Allows users to see event times in their own timezone.
+ * Version:           0.1
  * Author:            Modern Tribe, Inc.
  * Author URI:        http://m.tri.be/1971
  * License:           GPL version 3 or any later version
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:       __TRIBE_SLUG__
+ * Text Domain:       user-timezone
  *
  *     This plugin is free software: you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
@@ -25,32 +25,32 @@
 /**
  * Define the base file that loaded the plugin for determining plugin path and other variables.
  *
- * @since __TRIBE_VERSION__
+ * @since 0.1
  *
  * @var string Base file that loaded the plugin.
  */
-define( 'TRIBE_EXTENSION___TRIBE_SLUG_CLEAN_UPPERCASE___FILE', __FILE__ );
+define( 'TRIBE_EXTENSION_USER_TIMEZONE_FILE', __FILE__ );
 
 /**
  * Register and load the service provider for loading the extension.
  *
- * @since __TRIBE_VERSION__
+ * @since 0.1
  */
-function tribe_extension___TRIBE_SLUG_CLEAN__() {
-	// When we dont have autoloader from common we bail.
+function tribe_extension_user_timezone() {
+	// When we don't have autoloader from common we bail.
 	if  ( ! class_exists( 'Tribe__Autoloader' ) ) {
 		return;
 	}
 
 	// Register the namespace so we can the plugin on the service provider registration.
 	Tribe__Autoloader::instance()->register_prefix(
-		'\\Tribe\\Extensions\\__TRIBE_NAMESPACE__\\',
+		'\\Tribe\\Extensions\\User_Timezone\\',
 		__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'Tribe',
-		'__TRIBE_SLUG__'
+		'user_timezone'
 	);
 
-	tribe_register_provider( '\Tribe\Extensions\__TRIBE_NAMESPACE__\Plugin' );
+	tribe_register_provider( '\Tribe\Extensions\User_Timezone\Plugin' );
 }
 
 // Loads after common is already properly loaded.
-add_action( 'tribe_common_loaded', 'tribe_extension___TRIBE_SLUG_CLEAN__' );
+add_action( 'tribe_common_loaded', 'tribe_extension_user_timezone' );
